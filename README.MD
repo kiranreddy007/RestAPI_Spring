@@ -1,0 +1,1 @@
+HI there this is a Initial REst API client built using spring boot
