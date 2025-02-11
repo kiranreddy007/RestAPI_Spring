@@ -36,8 +36,3 @@ A simple, authentication-protected Todo application built with Spring Boot and S
 - [Maven](https://maven.apache.org/)
 - [Git](https://git-scm.com/)
 
-### Clone the Repository
-
-```bash
-git clone https://github.com/your-username/restapispring-todo.git
-cd restapispring-todo
