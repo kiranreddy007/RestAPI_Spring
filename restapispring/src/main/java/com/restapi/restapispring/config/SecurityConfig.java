@@ -1,4 +1,4 @@
-package com.restapi.restapispring;
+package com.restapi.restapispring.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,16 +18,9 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
-            // Disable CSRF for simplicity (not recommended for production)
-            .csrf(csrf -> csrf.disable())
-            // Secure all endpoints
-            .authorizeHttpRequests(authz -> authz
-                .anyRequest().authenticated()
-            )
-            // Enable basic authentication
+        http.csrf(csrf -> csrf.disable())
+            .authorizeHttpRequests(authz -> authz.anyRequest().authenticated())
             .httpBasic(Customizer.withDefaults());
-
         return http.build();
     }
 
